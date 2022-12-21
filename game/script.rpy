@@ -5,7 +5,7 @@
 
 # 게임에서 사용할 캐릭터를 정의합니다.
 
-image yuri idle = "char/원주민/코딩_신.png"
+image yuri idle = "char/원주민/코딩_신_도트.png"
 image chuhee idle ="char/chuhee/chuhee_idle.png"
 image yujin idle = "char/yuri/yuri_idle.png"
 image snowtown = "bg/snowtown.png"
