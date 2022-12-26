@@ -59,22 +59,22 @@ define gui.interface_text_color = '#9badb7'
 ## 글자와 글자 크기 ###################################################################
 
 ## 인-게임 글자에 사용됩니다.
-define gui.text_font = "Noto_Sans_KR/NotoSansKR-Regular.otf"
+define gui.text_font = "neodgm_code.ttf"
 
 ## 캐릭터의 이름에 사용됩니다.
-define gui.name_text_font = "Noto_Sans_KR/NotoSansKR-Black.otf"
+define gui.name_text_font = "neodgm_code.ttf"
 
 ## 인터페이스에 사용됩니다.
 define gui.interface_text_font = "Noto_Sans_KR/NotoSansKR-Bold.otf"
 
 ## 일반 대사의 글자 크기입니다.
-define gui.text_size = 22
+define gui.text_size = 24
 
 ## 캐릭터 이름의 글자 크기입니다.
-define gui.name_text_size = 30
+define gui.name_text_size = 32
 
 ## 게임의 유저 인터페이스에서 글자의 크기입니다.
-define gui.interface_text_size = 22
+define gui.interface_text_size = 24
 
 ## 게임의 유저 인터페이스에서 레이블(label)들의 글자 크기입니다.
 define gui.label_text_size = 24

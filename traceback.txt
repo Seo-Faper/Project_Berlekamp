@@ -1,52 +1,38 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 48, in script
-    $renpy.call_screen("set_name")
-  File "game/script.rpy", line 48, in <module>
-    $renpy.call_screen("set_name")
-TypeError: Missing required positional arguments: 'title', 'init_name'
+Compiling ATL code at game/script.rpy:76
+  File "game/script.rpy", line 75, in script
+    show chuhee idle at center with dissolve:
+Exception: Expression '0.7' is not an ATL transform, and so cannot be included in an ATL interpolation.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 48, in script
-    $renpy.call_screen("set_name")
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\ast.py", line 1131, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\python.py", line 1061, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/script.rpy", line 48, in <module>
-    $renpy.call_screen("set_name")
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\exports.py", line 3181, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\ui.py", line 299, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\display\core.py", line 3810, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\display\screen.py", line 451, in visit_all
-    callback(self)
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\display\core.py", line 3810, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\display\screen.py", line 462, in per_interact
-    self.update()
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\display\screen.py", line 653, in update
-    self.screen.function(**self.scope)
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\ast.py", line 294, in apply_arguments
-    return parameters.apply(args, kwargs, ignore_errors)
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\ast.py", line 230, in apply
-    raise TypeError(
-TypeError: Missing required positional arguments: 'title', 'init_name'
+  File "game/script.rpy", line 75, in script
+    show chuhee idle at center with dissolve:
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\ast.py", line 1408, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\ast.py", line 1371, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\exports.py", line 712, in show
+    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=default_transform, transient=transient)
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\display\core.py", line 1165, in add
+    thing.visit_all(lambda d : None)
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\display\core.py", line 572, in visit_all
+    for d in self.visit():
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\atl.py", line 614, in visit
+    block = self.compile()
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\atl.py", line 521, in compile
+    block = self.atl.compile(self.context)
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\atl.py", line 721, in compile
+    statements = [ i.compile(ctx) for i in self.statements ]
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\atl.py", line 721, in <listcomp>
+    statements = [ i.compile(ctx) for i in self.statements ]
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\atl.py", line 1024, in compile
+    raise Exception("Expression %r is not an ATL transform, and so cannot be included in an ATL interpolation." % expr)
+Exception: Expression '0.7' is not an ATL transform, and so cannot be included in an ATL interpolation.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.3.22090809
 프로젝트: 벌레캠프! 
-Thu Dec 22 01:39:16 2022
+Mon Dec 26 17:20:42 2022

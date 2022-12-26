@@ -37,10 +37,12 @@ screen set_name(title, init_name):
             text title
             input default init_name
 
-
+label end:
+    "끝"
+    return
 label start:
     scene city:
-    "아 취업 준나 안되네. 씨발"
+    "아 취업 준나 안되네."
     "코딩 부트캠프나 한번 조지고 개발자 취업해 볼까."
     "요즘 개발자가 핫하던데."
     "엇, 이게 뭐야, 벌레캠프? 코딩 교육 부트캠프라고?"
@@ -48,6 +50,7 @@ label start:
     "게다가 다른 유명한 부트캠프보다 가격도 훨씬 싸잖아."
     "헉, 마감 임박?! 15분전?" with vpunch
     "일단 신청하고 봐야겠다-!"
+    nvl_narrator "그렇게 갑자기 왠 무인도로 끌려가게 된다."
     scene forest:
     show yuri idle at center:
         yalign 100
@@ -69,15 +72,17 @@ label start:
         yalign 100
     r "아야야.. 아파라.."
     hide yuri with dissolve
-    show chuhee idle at center with dissolve:
+    show chuhee idle at center:
         yalign 100
+        ease 0.5 xalign 0.5 
+
     r "이봐, 당신! 사람을 쳤으면 사과 먼저 해야 하는 거 아냐?"
     "죄송합니다."
-    "조그매서 못봤네."
+    "(뭐야, 조그매서 못봤네.)"
     r "..됐어. 사과 대신에"
-    r "식사 배급을 위해 A부터 F까지 6개 조에 대한 배급 순서를 정하려고 한다."
-    r "모든 가능한 배급 순서를 알파벳 순서로 나열해보면\nA,B,C,D,E,F부터 F,E,D,C,B,A까지 총 720가지가 있는데,"
-    r "그 중 C,B,A,D,E,F는 몇 번째일까?"
+    r "두 자연수 A와 B가 주어진다."
+    r "이때, A+B, A-B, A*B, A/B(몫), A\%B(나머지)를 출력하는 프로그램을 작성하시오. "
+    r "단, (1 <= A, B <= 10,000)"
     r "쉽지?"
     window hide
     hide chuhee
@@ -88,7 +93,7 @@ label start:
                 yalign 100
             r "하, 진짜 심각하네. "
             r "이 정돈 무리 없이 알아야 할 텐데."
-            r "이런 간단한 문제도 풀지 못 하면 오늘 저녁은 쫄쫄 굶어야 할 걸."
+            r "이런 간단한 문제도 풀지 못 하면 당장 오늘 저녁은 쫄쫄 굶어야 할 걸."
             "아니.."
         "훗, 정답은 1, 0, -1 중 하나 입니다.":
             show yujin idle at right:
@@ -100,5 +105,6 @@ label start:
             r "저기요, 제가 먼저 말하고 있잖아요."
             r "끼어들지 마시죠?"
             "이 학생들도 참가자인 건가?"
+            jump end
 
     return
