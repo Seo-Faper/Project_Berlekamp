@@ -95,16 +95,17 @@ label start:
             r "이 정돈 무리 없이 알아야 할 텐데."
             r "이런 간단한 문제도 풀지 못 하면 당장 오늘 저녁은 쫄쫄 굶어야 할 걸."
             "아니.."
+
         "훗, 정답은 1, 0, -1 중 하나 입니다.":
             show yujin idle at right:
                 yalign 100
             j "병신인가?"
-            j "이런 사람이 어떻게 여기 온 거지?"
-            show chuhee idle at left:
-                yalign 100
-            r "저기요, 제가 먼저 말하고 있잖아요."
-            r "끼어들지 마시죠?"
-            "이 학생들도 참가자인 건가?"
-            jump end
+    j "이런 사람이 어떻게 여기 온 거지?"
+    show chuhee idle at left:
+            yalign 100
+    r "저기요, 제가 먼저 말하고 있잖아요."
+    r "끼어들지 마시죠?"
+    "이 학생들도 참가자인 건가?"
+    jump end
 
     return
