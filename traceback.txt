@@ -1,38 +1,48 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-Compiling ATL code at game/script.rpy:76
-  File "game/script.rpy", line 75, in script
-    show chuhee idle at center with dissolve:
-Exception: Expression '0.7' is not an ATL transform, and so cannot be included in an ATL interpolation.
+After initialization, but before game start.
+  File "game/script.rpy", line 58, in prepare_screen
+    screen set_name(title, init_name):
+  File "game/script.rpy", line 58, in prepare
+    screen set_name(title, init_name):
+  File "game/script.rpy", line 59, in prepare
+    frame:
+  File "game/script.rpy", line 59, in prepare
+    frame:
+SyntaxError: unexpected EOF while parsing (game/script.rpy, line 60)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 75, in script
-    show chuhee idle at center with dissolve:
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\ast.py", line 1408, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\ast.py", line 1371, in show_imspec
-    renpy.config.show(name,
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\exports.py", line 712, in show
-    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=default_transform, transient=transient)
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\display\core.py", line 1165, in add
-    thing.visit_all(lambda d : None)
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\display\core.py", line 572, in visit_all
-    for d in self.visit():
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\atl.py", line 614, in visit
-    block = self.compile()
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\atl.py", line 521, in compile
-    block = self.atl.compile(self.context)
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\atl.py", line 721, in compile
-    statements = [ i.compile(ctx) for i in self.statements ]
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\atl.py", line 721, in <listcomp>
-    statements = [ i.compile(ctx) for i in self.statements ]
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\atl.py", line 1024, in compile
-    raise Exception("Expression %r is not an ATL transform, and so cannot be included in an ATL interpolation." % expr)
-Exception: Expression '0.7' is not an ATL transform, and so cannot be included in an ATL interpolation.
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\bootstrap.py", line 277, in bootstrap
+    renpy.main.main()
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\main.py", line 660, in main
+    run(restart)
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\main.py", line 95, in run
+    renpy.display.screen.prepare_screens()
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\display\screen.py", line 976, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/script.rpy", line 58, in prepare_screen
+    screen set_name(title, init_name):
+  File "game/script.rpy", line 58, in prepare
+    screen set_name(title, init_name):
+  File "game/script.rpy", line 59, in prepare
+    frame:
+  File "game/script.rpy", line 59, in prepare
+    frame:
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\py3analysis.py", line 790, in ast_eval
+    return self.ast_eval_literal(expr)[0]
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\py3analysis.py", line 772, in ast_eval_literal
+    expr = py_compile(expr, 'eval', ast_node=True)
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\python.py", line 1027, in py_compile
+    raise e
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\python.py", line 979, in py_compile
+    raise orig_e
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\python.py", line 972, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: unexpected EOF while parsing (game/script.rpy, line 60)
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.3.22090809
 프로젝트: 벌레캠프! 
-Mon Dec 26 17:20:42 2022
+Tue Jan  3 23:18:55 2023
