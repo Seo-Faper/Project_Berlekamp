@@ -7,7 +7,11 @@
 
 image yuri idle = "char/원주민/코딩_신_도트.png"
 image chuhee idle ="char/chuhee/chuhee_idle.png"
+image chuhee smail ="char/chuhee/chuhee_smail.png"
+image chuhee happy ="char/chuhee/chuhee_happy.png"
 image yujin idle = "char/yuri/yuri_idle.png"
+image yujin angry = "char/yuri/yuri_angry.png"
+image yujin surp = "char/yuri/yuri_surp.png"
 image snowtown = "bg/snowtown.png"
 image forest = "bg/forest.png"
 image city = "bg/city.png"
@@ -97,15 +101,49 @@ label start:
             "아니.."
 
         "훗, 정답은 1, 0, -1 중 하나 입니다.":
-            show yujin idle at right:
+            show yujin idle at right :
                 yalign 100
             j "병신인가?"
+    show yujin idle at right:
+            yalign 100
     j "이런 사람이 어떻게 여기 온 거지?"
     show chuhee idle at left:
             yalign 100
     r "저기요, 제가 먼저 말하고 있잖아요."
     r "끼어들지 마시죠?"
     "이 학생들도 참가자인 건가?"
+
+    show yujin angry at right:
+            yalign 100 
+    j "넌 뭐야? "
+    j "혹시 죽여달란 말을 빙빙 돌려 말하는 건가?"
+    "(뭐야.. 왜 이렇게 화가 나 있는 거지?)"
+    r "흥, 자기가 코딩 허접이라서 틀려 놓고선 왜 엄한데 화풀이 신지?"
+    r "남한테 화풀이 할 시간에 자기 코드나 풀이 하는게?"
+    show chuhee happy at left:
+            yalign 100
+    r "뭐, 본인한테 정 어려우면 제가 살짝 도와줄 수도 있고."
+    r "물론 하는 거 봐서."
+    show yujin surp at right:
+            yalign 100
+    j "코.. 코딩 허접?"
+    j "너 지금 대한민국 최고 알고리즘 대회를 최연소로 우승하고."
+    j "코딩 특기자 전형으로 아시아 최고의 공대에 합격한 사람을 허접이라고 한 거야?"
+    show chuhee smail at left:
+            yalign 100
+    r "푸하하하! 본인 입으로 대한민국 최고 알고리즘 대회 우승자~?"
+    r "그리고 너 말이야, 여기서 그렇게 대회에 우승했다느니."
+    r "어디에 당당하게 합격했다느니 하는건 말이야."
+    r "`난 우리 엄마의 자랑스러운 딸이다` ~라고 자랑하는 거나 다를 바가 없다는 거 알아?"
+    show yujin angry at right:
+            yalign 100 
+    j "......."
+    j "너 두고 봐."
+    j "흥."
+    show yujin angry at right:
+            yalign 100 
+            ease 0.5 xalign -0.8 
+
     jump end
 
     return
