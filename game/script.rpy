@@ -6,6 +6,7 @@
 # 게임에서 사용할 캐릭터를 정의합니다.
 
 image yuri idle = "char/원주민/코딩_신_도트.png"
+image maid idle = "char/원주민/코딩_노예.png"
 image chuhee idle ="char/chuhee/chuhee_idle.png"
 image chuhee smail ="char/chuhee/chuhee_smail.png"
 image chuhee happy ="char/chuhee/chuhee_happy.png"
@@ -15,9 +16,11 @@ image yujin surp = "char/yuri/yuri_surp.png"
 image snowtown = "bg/snowtown.png"
 image forest = "bg/forest.png"
 image city = "bg/city.png"
+image hotel = "bg/hotel.png"
 define e = Character('유리', color="#acaea4")
 define j = Character('유진', color="#ffffff")
 define r = Character('추희', color="#ffffff")
+define m = Character('코딩 노예', color="#00ff00")
 define sys = Character('System', color="#ffffff")
 init python:
     class Player:
@@ -43,6 +46,16 @@ init python:
 label show_item_list:
 # item list screen 호출
     call screen sc_item_list
+    if _return is "intra":
+        sys "인트라넷에 접속합니다."
+        jump show_item_list
+    elif _return is "cart":
+        sys "물품 구매에 접속합니다."
+        jump show_item_list
+    elif _return is "rank":
+        sys "현재 랭킹을 확인합니다."
+        jump show_item_list
+
 
 screen sc_item_list:
 
@@ -180,7 +193,7 @@ label start:
     "..."
     "저기, 대한민국 최고의 알고리즘 대회에 아시아 최고 공대면 엄청난 거 아냐?"
     r "물론 대단하지."
-    r "유진이는 내 어릴적 친구야."
+    r "유진이는 내가 어릴 때 부터 같이 지낸 친구야."
     r "나랑 다른 고등학교를 가게 됐던 건 안타깝지만.."
     r "그래도 여기서 만났으니 잘된 거지!"
     r "누구보다 우월했고, 잘난맛에 살아왔지만."
@@ -196,9 +209,29 @@ label start:
     "그마저도 이런 곳인 줄 알았으면 신청도 안 했을 텐데.."
     "막막하다. 곧 어두워질 것 같은데."
     "배도 고프고.."
-    "일단 아까 지급 받은 노트북이라도 펼쳐볼까."
-    sys "노트북이 해금되었습니다."
-    $ show_inventory = True
+    "잠은 어디서 자야 하는 거지?"
+    "분명 숙식지원에 노트북 지원이라고 했는데.."
+    show yuri idle at center:
+        yalign 100
+        ease 0.2 xalign 0.5
+    e "지원자님!! 여기 계셨군요. 정말이지 한참 찾았네요!"
+    e "아직 소개도 덜 했는데,\n잠시 자릴 비운사이에 바람처럼 사라지셔서.."
+    e "전력 공급이 끊긴 휘발성 메모리(volatile memmory)인줄 알았어요!"
+    e "숙소로 안내해 드리겠습니다."
+    e "거기서 노트북 지급과 미리 와 계신 다른 지원자분들도 만나보아요."
+    scene black with dissolve
+
+    show text "Chapter 01\n인간관계는 자료구조 처럼?!" with Pause(1.5)
+
+    scene black with dissolve
+    scene hotel 
+    "우왓, 이런 곳에 호텔이?"
+    show maid idle at left:
+        yalign 100
+        ease 0.5 xalign 0.1
+    m "처음 뵙겠습니다." 
+    "명찰에 코딩 노예라고 적혀져 있다. 당황스럽군."
+    "요즘 IT 기업에서는 실명 말고 별명으로 업무를 본다던데, \n그걸 밴치마킹 한건가." 
     jump end
 
     return
