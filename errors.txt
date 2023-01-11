@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 50: 'screen' is not a keyword argument or valid child for the screen statement.
-    screen demo_imagemap:
+File "game/script.rpy", line 234: expected 'simple_expression' not found.
+    yalign
           ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Jan  3 23:40:10 2023
+Wed Jan 11 20:42:08 2023
