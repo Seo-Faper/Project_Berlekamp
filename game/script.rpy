@@ -22,6 +22,7 @@ define j = Character('유진', color="#ffffff")
 define r = Character('추희', color="#ffffff")
 define m = Character('코딩 노예', color="#00ff00")
 define sys = Character('System', color="#ffffff")
+define pov = Character("[povname]", color="#FDA769")
 init python:
     class Player:
         def __init__ (self, name, lv, hp):
@@ -123,9 +124,9 @@ label start:
     "죄송합니다."
     "(뭐야, 조그매서 못봤네.)"
     r "..됐어. 사과 대신에"
-    r "두 자연수 A와 B가 주어진다."
-    r "이때, A+B, A-B, A*B, A/B(몫), A\%B(나머지)를 출력하는 프로그램을 작성하시오. "
-    r "단, (1 <= A, B <= 10,000)"
+    r "식사 배급을 위해 A부터 F까지 6개 조에 대한 배급 순서를 정하려고 한다."
+    r "이때, 가능한 발표 순서를 알파벳 순서로 나열해보면 \nABCDEF부터 FEDCBA까지 720가지가 있는데."
+    r "그 중 CBADEF는 몇 번째인가?"
     r "쉽지?"
     window hide
     hide chuhee
@@ -142,9 +143,10 @@ label start:
         "훗, 정답은 1, 0, -1 중 하나 입니다.":
             show yujin idle at right :
                 yalign 100
-            j "병신인가?"
+            j "미친놈인가?"
     show yujin idle at right:
             yalign 100
+    j "잠깐 문제 안 풀려서 머리 식힐 겸 산책 나왔는데 \n별 신기한 광경을 다 보겠네."
     j "이런 사람이 어떻게 여기 온 거지?"
     show chuhee idle at left:
             yalign 100
@@ -167,7 +169,7 @@ label start:
             yalign 100
     j "코.. 코딩 허접?"
     j "너 지금 대한민국 최고 알고리즘 대회를 최연소로 우승하고."
-    j "코딩 특기자 전형으로 아시아 최고의 공대에 합격한 사람을 허접이라고 한 거야?"
+    j "코딩 특기자 전형으로 아시아 최고의 공대에\n합격한 사람을 허접이라고 한 거야?"
     show chuhee smail at left:
             yalign 100
             ease 0.1 xalign 0.05
@@ -191,15 +193,16 @@ label start:
         ease 0.5 xalign 0.5 
     r "아~ 간만에 웃었네."
     "..."
-    "저기, 대한민국 최고의 알고리즘 대회에 아시아 최고 공대면 엄청난 거 아냐?"
+    "저기, 대한민국 최고의 알고리즘 대회에 \n아시아 최고 공대면 엄청난 거 아냐?"
     r "물론 대단하지."
     r "유진이는 내가 어릴 때 부터 같이 지낸 친구야."
     r "나랑 다른 고등학교를 가게 됐던 건 안타깝지만.."
     r "그래도 여기서 만났으니 잘된 거지!"
     r "누구보다 우월했고, 잘난맛에 살아왔지만."
     r "어느세 부터인가 그저 어른들의 만들어놓은 시시한 틀에만 갇히게 됐달까?"
-    "..의미를 모르겠네."
+    "..의미를 모르겠네.. 이해할 수 없어."
     r "뭐, 됐어. "
+    r "최고의 이해는 이해할 수 없음을 인정하는 거니까."
     r "너도 일단 여기 들어왔다는 것 부터 한 따까리 한다는 뜻일테니."
     r "알아서 잘 살아남아봐."
     r "그럼 난 풀던 문제가 있어서 이만. 덕분에 환기 잘 했어."
@@ -210,18 +213,18 @@ label start:
     "막막하다. 곧 어두워질 것 같은데."
     "배도 고프고.."
     "잠은 어디서 자야 하는 거지?"
-    "분명 숙식지원에 노트북 지원이라고 했는데.."
+    "분명 숙식지원에 노트북 지원이라고 했는데."
     show yuri idle at center:
         yalign 100
         ease 0.2 xalign 0.5
     e "지원자님!! 여기 계셨군요. 정말이지 한참 찾았네요!"
     e "아직 소개도 덜 했는데,\n잠시 자릴 비운사이에 바람처럼 사라지셔서.."
     e "전력 공급이 끊긴 휘발성 메모리(volatile memmory)인줄 알았어요!"
-    e "숙소로 안내해 드리겠습니다."
+    e "그럼 숙소로 안내해 드리겠습니다."
     e "거기서 노트북 지급과 미리 와 계신 다른 지원자분들도 만나보아요."
     scene black with dissolve
 
-    show text "Chapter 01\n인간관계는 자료구조 처럼?!" with Pause(1.5)
+    show text "Chapter 01\nGreedy쟁이 그녀!" with Pause(2.5)
 
     scene black with dissolve
     scene hotel 
@@ -231,7 +234,23 @@ label start:
         ease 0.5 xalign 0.1
     m "처음 뵙겠습니다." 
     "명찰에 코딩 노예라고 적혀져 있다. 당황스럽군."
-    "요즘 IT 기업에서는 실명 말고 별명으로 업무를 본다던데, \n그걸 밴치마킹 한건가." 
+    "요즘 IT 기업에서는 실명 말고 별명으로 업무를 본다던데, \n그건가보다." 
+
+    m "여긴 Vector 호텔입니다."
+    m "저는 여기를 관리하는 직원 입니다만.."
+    m "다른 분들께 지원자님을 소개하기 전에 지원자님을 뭐라고 부르면 될까요?"
+    $ povname = renpy.input("내 이름은..", length=32)
+    $ povname = povname.strip()
+    if not povname:
+        $ povname = "문지혁"
+    if 44032 <= ord(povname[-1]) <= 55203:
+        if (ord(povname[-1]) - 44032) % 28 == 0:
+                pov "[povname]! 난 [povname]라고 해."
+        else:
+                pov "[povname]! 난 [povname]이라고 해."
+    else:
+        pov "[povname]! 내이름은 [povname]."
+    m "[povname]님, 알겠습니다. 그럼 따라오시죠."
     jump end
 
     return
