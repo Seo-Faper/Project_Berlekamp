@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 234: expected 'simple_expression' not found.
-    yalign
-          ^
+File "game/script.rpy", line 283: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
+    ease 0.5 yalign 100
+    ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Wed Jan 11 20:42:08 2023
+Sat Jan 14 00:13:28 2023

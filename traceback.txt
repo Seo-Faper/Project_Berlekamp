@@ -1,48 +1,33 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/script.rpy", line 58, in prepare_screen
-    screen set_name(title, init_name):
-  File "game/script.rpy", line 58, in prepare
-    screen set_name(title, init_name):
-  File "game/script.rpy", line 59, in prepare
-    frame:
-  File "game/script.rpy", line 59, in prepare
-    frame:
-SyntaxError: unexpected EOF while parsing (game/script.rpy, line 60)
+While running game code:
+  File "game/script.rpy", line 265, in script
+    m "Vector는 {color="#0000000"}크기가 무한대인 배열인데 꽉 차버렸다구요?"
+Exception: Open text tag at end of string 'Vector는 {color='.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\bootstrap.py", line 277, in bootstrap
-    renpy.main.main()
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\main.py", line 660, in main
-    run(restart)
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\main.py", line 95, in run
-    renpy.display.screen.prepare_screens()
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\display\screen.py", line 976, in prepare_screens
-    s.ast.prepare_screen()
-  File "game/script.rpy", line 58, in prepare_screen
-    screen set_name(title, init_name):
-  File "game/script.rpy", line 58, in prepare
-    screen set_name(title, init_name):
-  File "game/script.rpy", line 59, in prepare
-    frame:
-  File "game/script.rpy", line 59, in prepare
-    frame:
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\py3analysis.py", line 790, in ast_eval
-    return self.ast_eval_literal(expr)[0]
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\py3analysis.py", line 772, in ast_eval_literal
-    expr = py_compile(expr, 'eval', ast_node=True)
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\python.py", line 1027, in py_compile
-    raise e
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\python.py", line 979, in py_compile
-    raise orig_e
-  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\python.py", line 972, in py_compile
-    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: unexpected EOF while parsing (game/script.rpy, line 60)
+  File "game/script.rpy", line 265, in script
+    m "Vector는 {color="#0000000"}크기가 무한대인 배열인데 꽉 차버렸다구요?"
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\character.py", line 1266, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\character.py", line 927, in do_display
+    display_say(who,
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\character.py", line 647, in display_say
+    what_text.update()
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\text\text.py", line 1812, in update
+    tokens = self.tokenize(text)
+  File "C:\Users\dswhd\Documents\saksinsiksasasikji\Ren\renpy-8.0.3-sdk\renpy\text\text.py", line 2280, in tokenize
+    tokens.extend(textsupport.tokenize(i))
+  File "textsupport.pyx", line 154, in renpy.text.textsupport.tokenize
+Exception: Open text tag at end of string 'Vector는 {color='.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.3.22090809
 프로젝트: 벌레캠프! 
-Tue Jan  3 23:18:55 2023
+Fri Jan 13 23:11:26 2023

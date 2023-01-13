@@ -12,6 +12,7 @@ image chuhee idle ="char/chuhee/chuhee_idle.png"
 image chuhee smail ="char/chuhee/chuhee_smail.png"
 image chuhee happy ="char/chuhee/chuhee_happy.png"
 image yujin idle = "char/yuri/yuri_idle.png"
+image yujin smail = "char/yuri/yuri_smail.png"
 image yujin angry = "char/yuri/yuri_angry.png"
 image yujin surp = "char/yuri/yuri_surp.png"
 image snowtown = "bg/snowtown.png"
@@ -262,10 +263,66 @@ label start:
     m "아가씨, 제가 분명 회사에선 본명말고 넥네임으로.."
     p "그게 중요한게 아니고! 지금 Vector 호텔에 손님이 꽉 차버렸단 말이야!" 
     m "네에? 그게 어떻게 가능하지요? "
-    m "Vector는 크기가 무한대인 배열인데 꽉 차버렸다구요?"
-    m "그럼 손님이 무한대명 오셨다는 거예요?"
+    m "Vector는 {b}{color=#820000}크기가 무한대인 배열{/color}{/b}인데 꽉 차버렸다구요?"
+    m "그럼 손님이 무한대 명 오셨다는 거예요?"
     p "그렇다니까!!"
-    p ""
+    m "그럼 [pov]님이 입주하실 방은 어쩌죠?"
+    p "[pov]? 그게 누군데."
+    m "지금 저랑 같이 오신, {color=#ABC270}프로젝트 벌래캠프{/color}의 참가자셔요."
+    
+    show prinses idle at right:
+            yalign 100
+            ease 0.1 xalign 0.9 
+            ease 0.1 xalign 1.0 
+            ease 0.1 xalign 0.9 
+            ease 0.1 xalign 1.0 
+    p "뭐.. 뭣? 벌래캠프 참가자? 분명 더 이상 안뽑는다고 했잖아!"
+    m "확실히 그렇다고는 했지만.. 그 분들의 변덕은 알 수가 없으니까요.."
+    p "하.. 어쩌지, 빈방이 구해질 때 까지만이라도 \n일단 다른 참가자분과 같은 방을 쓰게 하는게.."
+    m "하지만 아가씨, 아시다시피.. 이번 기수 참가자분들은 전부.."
+    show maid idle at left:
+        yalign 100
+        ease 0.5 xalign 0.0
+    show yujin idle at center:
+        xalign 2
+        yalign 100
+        ease 0.8 xalign 0.5
+    j "다들 안들어가고 뭐해?"
+    j "어라? 호텔 지배인 아가씨도 있네."
+    show yujin angry at center:
+        yalign 100
+    j "아 맞아, 잘 만났다. 지금 호텔이 너무 시끄러워서 집중을 못하겠어."
+    j "층간소음이 원래는 없었는데."
+    m "유진님, 사실은 그게.."
+    "현 상황을 털어놓는 코딩 노예"
+    show yujin smail at center:
+        yalign 100
+    j "뭐야, 간단한 일이잖아."
+    j "그럼 그냥.."
+    p "역시 다른 참가자분들 중 한명과 일단 같은 방을 쓰는게.."
+    j "지배인씨, 모든 방 사람들에게 {color=#FFC93C}\'2 * 자기 방 번호 + 1 호\'{/color} 로 방을 옮겨 달라고 방송해줘."
+    m "와아, 역시!"
+    p "오, 그렇게 하면 제일 첫번째 방을 비울 수 있는건 물론이고 \n또 무한대명의 손님이 와도 대처할 수 있겠군."
+    m "천재셔요! 그럼 바로 준비하겠습니다."
+    m "[pov]님! 그럼 잠시 후에 제일 첫번째 방으로 안내해 드리겠습니다."
+    m "가시죠, 아가씨!"
+    p "그래~!"
+    show maid idle at left:
+        yalign 100
+        ease 0.5 xalign -0.8 
+    hide maid idle
+    show prinses idle at left:
+        yalign 100
+        ease 0.5 xalign -0.8 
+    hide prinses idle
+    pov "헉, 빠르다.."
+    show yujin idle at center:
+        yalign 100
+    j "좋아~ 이걸로 이제 윗층에서 시끄럽게 떠드는 것도 해결."
+    j "저 사람들이 안내하는 걸 보니 너 정말 참가자가 맞나 보구나?"
+    j "뭐 좋아, 그럼 곧 정산할 시간이기도 하니까 따라와."
+    j "곧 어두워지기도 하고. 밥도 먹어야 하니까."
+
     jump end
 
     return
