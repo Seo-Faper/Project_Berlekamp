@@ -7,6 +7,7 @@
 
 image yuri idle = "char/원주민/코딩_신_도트.png"
 image maid idle = "char/원주민/코딩_노예.png"
+image prinses idle = "char/원주민/코딩공주_사복.png"
 image chuhee idle ="char/chuhee/chuhee_idle.png"
 image chuhee smail ="char/chuhee/chuhee_smail.png"
 image chuhee happy ="char/chuhee/chuhee_happy.png"
@@ -21,6 +22,7 @@ define e = Character('유리', color="#acaea4")
 define j = Character('유진', color="#ffffff")
 define r = Character('추희', color="#ffffff")
 define m = Character('코딩 노예', color="#00ff00")
+define p = Character('오리아나', color="#5BC0F8")
 define sys = Character('System', color="#ffffff")
 define pov = Character("[povname]", color="#FDA769")
 init python:
@@ -224,7 +226,7 @@ label start:
     e "거기서 노트북 지급과 미리 와 계신 다른 지원자분들도 만나보아요."
     scene black with dissolve
 
-    show text "Chapter 01\nGreedy쟁이 그녀!" with Pause(2.5)
+    show text "Chapter 01\n\nGreedy쟁이 그녀!" with Pause(2.5)
 
     scene black with dissolve
     scene hotel 
@@ -233,12 +235,13 @@ label start:
         yalign 100
         ease 0.5 xalign 0.1
     m "처음 뵙겠습니다." 
-    "명찰에 코딩 노예라고 적혀져 있다. 당황스럽군."
-    "요즘 IT 기업에서는 실명 말고 별명으로 업무를 본다던데, \n그건가보다." 
+    "(명찰에 코딩 노예라고 적혀져 있다. 당황스럽군.)"
+    "(요즘 IT 기업에서는 실명 말고 별명으로 업무를 본다던데, \n그건가보다.)" 
 
     m "여긴 Vector 호텔입니다."
     m "저는 여기를 관리하는 직원 입니다만.."
     m "다른 분들께 지원자님을 소개하기 전에 지원자님을 뭐라고 부르면 될까요?"
+    
     $ povname = renpy.input("내 이름은..", length=32)
     $ povname = povname.strip()
     if not povname:
@@ -250,7 +253,19 @@ label start:
                 pov "[povname]! 난 [povname]이라고 해."
     else:
         pov "[povname]! 내이름은 [povname]."
-    m "[povname]님, 알겠습니다. 그럼 따라오시죠."
+    m "좋습니다. [povname]님, 그럼 따라오시죠."
+    show prinses idle at right:
+            yalign 100
+            ease 0.5 xalign 1.0 
+    p "진례야! 큰일났어! "
+    "(본명이 진례셨구나.)"
+    m "아가씨, 제가 분명 회사에선 본명말고 넥네임으로.."
+    p "그게 중요한게 아니고! 지금 Vector 호텔에 손님이 꽉 차버렸단 말이야!" 
+    m "네에? 그게 어떻게 가능하지요? "
+    m "Vector는 크기가 무한대인 배열인데 꽉 차버렸다구요?"
+    m "그럼 손님이 무한대명 오셨다는 거예요?"
+    p "그렇다니까!!"
+    p ""
     jump end
 
     return
