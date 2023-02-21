@@ -272,7 +272,7 @@ label start:
     
     show prinses idle at right:
             yalign 100
-            ease 0.1 xalign 0.9 
+            ease 0.1 xalign 0.8 
             ease 0.1 xalign 1.0 
             ease 0.1 xalign 0.9 
             ease 0.1 xalign 1.0 
