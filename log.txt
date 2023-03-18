@@ -1,21 +1,20 @@
-Sun Feb 26 23:05:44 2023
+Tue Feb 28 21:37:01 2023
 macOS-10.16-x86_64-i386-64bit
 Ren'Py 8.0.3.22090809
  
 
-Bootstrap to the start of init.init took 0.03s
+Bootstrap to the start of init.init took 0.04s
 Early init took 0.00s
 Loader init took 0.01s
-Loading error handling took 0.07s
-Loading script took 0.60s
+Loading error handling took 0.02s
+Loading script took 0.08s
 Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Faled to initialize steam: OSError("dlopen(/Users/seojongchan/Desktop/renpy-8.0.3-sdk/lib/py3-mac-x86_64/libsteam_api.dylib, 0x0006): tried: '/Users/seojongchan/Desktop/renpy-8.0.3-sdk/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/seojongchan/Desktop/renpy-8.0.3-sdk/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file), '/Users/seojongchan/Desktop/renpy-8.0.3-sdk/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file)")
-Running init code took 0.04s
+Running init code took 0.03s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Backing up script files to '/Users/seojongchan/Library/RenPy/backups/Project_Berlekamp':
 Dump and make backups. took 0.03s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
@@ -23,25 +22,25 @@ Initial gc. took 0.01s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.02s
+Init translation took 0.03s
 Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.02s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.16s
+Interface start took 0.19s
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
+primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
 Windowed mode.
 Vendor: "b'Apple'"
 Renderer: b'Apple M1'
 Version: b'2.1 Metal - 83'
 Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1163, 654) drawable=(2326, 1308)
+Screen sizes: virtual=(1280, 720) physical=(1099, 618) drawable=(1099, 618)
 Maximum texture size: 4096x4096
