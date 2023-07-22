@@ -149,7 +149,6 @@ label start:
             j "미친놈인가?"
     show yujin idle at right:
             yalign 100
-    j "잠깐 문제 안 풀려서 머리 식힐 겸 산책 나왔는데 \n별 신기한 광경을 다 보겠네."
     j "이런 사람이 어떻게 여기 온 거지?"
     show chuhee idle at left:
             yalign 100
