@@ -5,7 +5,7 @@
 # Don't track content of these folders #
 ########################################
 cache/
-saves/
+saves/*
 
 
 # Compiled source #
